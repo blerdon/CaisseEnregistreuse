@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SB Admin 2 CSS local -->
+  <link rel="stylesheet" th:href="@{/resources/css/sb-admin-2.min.css}">
+
+  <title>Caisse enregistreuse</title>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand" th:href="@{/}">
+      <img th:src="@{/resources/images/caisse.png}" alt="Logo" class="logo"/>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Analytics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Créer un ticket</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Créer un client</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container mt-5">
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Inventory Details</h6>
+    </div>
+    <div class="card-body">
+      <p>System Name: <span th:text="${inventoryData.system}"></span></p>
+      <p>Items in Stock: <span th:text="${inventoryData.itemsInStock}"></span></p>
+      <p>Operating: <span th:text="${inventoryData.isOperating ? 'Yes' : 'No'}"></span></p>
+    </div>
+  </div>
+
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Sales Graph</h6>
+    </div>
+    <div class="card-body">
+      <img th:src="@{/resources/images/sample-graph.png}" alt="Sales Graph" class="img-fluid"/>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="text-center text-muted">© LeRangDuFond</p>
+</footer>
+
+<!-- Optional JavaScript; local files -->
+<script th:src="@{/resources/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{/resources/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/resources/js/sb-admin-2.min.js}"></script>
+
+</body>
+</html>
