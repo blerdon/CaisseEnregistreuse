@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.Service;
+package org.springframework.CaisseEnregistreuse.Service;
 
 public class Ticket {
     private int id;

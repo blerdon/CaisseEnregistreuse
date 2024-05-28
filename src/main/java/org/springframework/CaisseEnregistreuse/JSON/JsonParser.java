@@ -1,8 +1,9 @@
-package org.springframework.samples.petclinic.JSON;
+package org.springframework.CaisseEnregistreuse.JSON;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.CaisseEnregistreuse.Service.*;
 import org.springframework.samples.petclinic.Service.*;
 import org.springframework.stereotype.Component;
 

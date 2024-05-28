@@ -1,7 +1,7 @@
-package org.springframework.samples.petclinic.Service;
+package org.springframework.CaisseEnregistreuse.Service;
 
+import org.springframework.CaisseEnregistreuse.JSON.JsonParser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.samples.petclinic.JSON.JsonParser;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
