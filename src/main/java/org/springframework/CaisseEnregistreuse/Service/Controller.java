@@ -4,7 +4,6 @@ import org.springframework.CaisseEnregistreuse.JSON.JsonParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -20,7 +19,7 @@ import java.util.logging.Logger;
 public class Controller {
 
 	private static final Logger logger = Logger.getLogger(Controller.class.getName());
-	private static final String IPADDRESS = "157.26.107.146";
+	private static final String IPADDRESS = "172.16.128.51";
 
 	private final JsonParser jsonParser;
 	private final HttpClient httpClient;
@@ -124,7 +123,7 @@ public class Controller {
 
 		// CA de l'année
 		String year = String.valueOf(Year.now().getValue());
-		String caApiUrl = "http://157.26.107.146:5000/sum/" + year;
+		String caApiUrl = "http://172.16.128.51:5000/sum/" + year;
 		HttpRequest caRequest = HttpRequest.newBuilder()
 				.uri(URI.create(caApiUrl))
 				.build();
@@ -150,7 +149,7 @@ public class Controller {
 		return "fragments/index";
 	}
 	@GetMapping("/tables")
-	public String tablesPage(Model model) {
+		public String tablesPage(Model model) {
 		String apiUrl = "http://" + IPADDRESS + ":5000/all_clients";
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(apiUrl))

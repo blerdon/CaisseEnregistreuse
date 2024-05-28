@@ -3,54 +3,66 @@ package org.springframework.CaisseEnregistreuse.Service;
 import java.util.List;
 
 public class Client {
-    private String lastname;
-    private String firstname;
-    private String gender;
-    private String birthday;
-    private String cardnumber;
-    private List<Ticket> receipts; // Ajouter cette ligne
 
+	private String lastname;
 
-    // Getters and setters
-    public String getLastname() {
-        return lastname;
-    }
+	private String firstname;
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
+	private String gender;
 
-    public String getFirstname() {
-        return firstname;
-    }
+	private String birthday;
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
+	private String cardnumber;
 
-    public String getGender() {
-        return gender;
-    }
+	private List<Ticket> receipts; // Ajouter cette ligne
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+	// Getters and setters
+	public String getLastname() {
+		return lastname;
+	}
 
-    public String getBirthday() {
-        return birthday;
-    }
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
+	public String getFirstname() {
+		return firstname;
+	}
 
-    public String getCardnumber() {
-        return cardnumber;
-    }
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
 
-    public void setCardnumber(String cardnumber) {
-        this.cardnumber = cardnumber;
-    }
-    public List<Ticket> getReceipts() { return receipts; }
-    public void setReceipts(List<Ticket> receipts) { this.receipts = receipts; }
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+
+	public String getCardnumber() {
+		return cardnumber;
+	}
+
+	public void setCardnumber(String cardnumber) {
+		this.cardnumber = cardnumber;
+	}
+
+	public List<Ticket> getReceipts() {
+		return receipts;
+	}
+
+	public void setReceipts(List<Ticket> receipts) {
+		this.receipts = receipts;
+	}
+
 }

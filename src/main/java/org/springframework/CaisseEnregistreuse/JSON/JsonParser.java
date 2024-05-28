@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.CaisseEnregistreuse.Service.*;
-import org.springframework.samples.petclinic.Service.*;
 import org.springframework.stereotype.Component;
 
 import java.math.RoundingMode;
@@ -13,13 +12,11 @@ import java.util.logging.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
 @Component
 public class JsonParser {
 
 	private final ObjectMapper mapper;
+
 	private static final Logger logger = Logger.getLogger(Controller.class.getName());
 
 	public JsonParser() {
@@ -82,7 +79,8 @@ public class JsonParser {
 		sum = Math.round(sum * 100.0) / 100.0;
 		return sum;
 	}
-	//payment method parser
+
+	// payment method parser
 	public List<PaymentMethod> parsePaymentMethods(String json) throws JsonProcessingException {
 		JsonNode root = mapper.readTree(json);
 		System.out.println(root);
@@ -96,6 +94,7 @@ public class JsonParser {
 
 		return paymentMethods;
 	}
+
 	public String parseCA(String json) throws JsonProcessingException {
 		JsonNode root = mapper.readTree(json);
 		logger.info("JSON Root: " + root);
